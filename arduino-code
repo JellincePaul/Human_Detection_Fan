@@ -1,0 +1,32 @@
+int pirPin1 = 1;
+int pirPin2 = 2;
+int pirPin3 = 3;
+int pirPin4 = 4; 
+                 
+void setup() {
+ pinMode(ledPin, OUTPUT);     
+ pinMode(pirPin, INPUT);     
+ Serial.begin(9600);
+}
+void loop(){
+  
+ int pirStat1 = digitalRead(pirPin1); 
+ int pirStat2 = digitalRead(pirPin2); 
+ int pirStat3 = digitalRead(pirPin3); 
+ int pirStat4 = digitalRead(pirPin4); 
+ if (pirStat1 == HIGH) {            
+    Serial.println("0-45");
+ } 
+ else if (pirStat2 == HIGH) {            
+    Serial.println("45-90");
+ } 
+ else if (pirStat3 == HIGH) {            
+    Serial.println("90-135");
+ } 
+ else if (pirStat4 == HIGH) {            
+    Serial.println("135-180");
+ } 
+ else {
+  Serial.println("no motion");
+ }
+}
