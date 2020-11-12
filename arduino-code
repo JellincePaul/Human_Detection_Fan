@@ -2,6 +2,7 @@ int pirPin1 = 1;
 int pirPin2 = 2;
 int pirPin3 = 3;
 int pirPin4 = 4; 
+int servoPin = 8;
                  
 void setup() {
  pinMode(ledPin, OUTPUT);     
